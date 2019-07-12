@@ -1,0 +1,55 @@
+{
+    "name": "surda/webloader",
+    "description": "Integration of Machy8/webloader",
+    "keywords": ["nette", "webloader", "javascript", "css"],
+    "type": "library",
+    "homepage": "http://surani.cz",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Radek Šuráni",
+            "homepage": "http://surani.cz",
+            "email": "radek@surani.cz"
+        }
+    ],
+    "support": {
+        "email": "radek@surani.cz",
+        "issues": "https://github.com/surda/webloader/issues"
+    },
+    "require": {
+        "php": ">=7.1",
+        "machy8/webloader": "^1.3",
+        "natxet/cssmin": "~3.0",
+        "tedivm/jshrink": "~1.0"
+    },
+    "require-dev": {
+        "nette/tester": "^2.0",
+        "ninjify/nunjuck": "0.3.x-dev",
+        "phpstan/phpstan": "^0.11",
+        "phpstan/phpstan-strict-rules": "^0.11",
+        "phpstan/phpstan-nette": "^0.11",
+        "phpstan/phpstan-deprecation-rules": "^0.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Surda\\WebLoader\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Surda\\WebLoader\\": "tests/cases"
+        }
+    },
+    "scripts": {
+        "tests": [
+            "vendor/bin/tester -s -p php -C tests/cases"
+        ],
+        "phpstan": [
+            "vendor/bin/phpstan analyse -l max -c phpstan.neon src"
+        ],
+        "da": [
+            "composer dump-autoload -o"
+        ]
+    },
+    "minimum-stability": "stable"
+}
