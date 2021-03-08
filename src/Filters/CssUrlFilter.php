@@ -110,7 +110,7 @@ class CssUrlFilter
 		~xs';
         $self = $this;
 
-        return (string) preg_replace_callback($regexp, function ($matches) use ($self, $file) {
+        return (string) preg_replace_callback($regexp, function ($matches) use ($self, $file): string {
             return "url('" . $self->absolutizeUrl($matches[2], $matches[1], $file) . "')";
         }, $code);
     }
