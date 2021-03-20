@@ -8,10 +8,7 @@ use Surda\WebLoader\Filters\JsMinFilter;
 use WebLoader\Engine;
 use WebLoader\Exception as WebLoaderException;
 
-/**
- * @deprecated
- */
-trait TWebLoader
+trait InjectWebLoader
 {
     /** @var Engine */
     private $webLoaderEngine;
