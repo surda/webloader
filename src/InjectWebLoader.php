@@ -52,8 +52,8 @@ trait InjectWebLoader
         }
 
         $this->onStartup[] = function () {
-            $this->template->webloaderFilesCollectionRender = $this->webLoaderEngine->getFilesCollectionRender();
-            $this->template->webloaderFilesCollectionsContainerRender = $this->webLoaderEngine->getFilesCollectionsContainerRender();
+            $this->template->webloaderCollection = $this->webLoaderEngine->getFilesCollectionRender();
+            $this->template->webloaderCollections = $this->webLoaderEngine->getFilesCollectionsContainerRender();
         };
     }
 }
