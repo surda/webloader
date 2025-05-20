@@ -19,7 +19,7 @@
     "require": {
         "php": ">=8.0",
         "machy8/webloader": "^2.0",
-        "natxet/cssmin": "~3.0",
+        "surda/cssmin": "^1.0",
         "tedivm/jshrink": "~1.0"
     },
     "require-dev": {
